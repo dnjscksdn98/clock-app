@@ -1,5 +1,9 @@
 body {
-    color: #34495e;
+    background-color: #2c3e50;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fcfcfc;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, .5);
 }
 
 .form,
@@ -9,4 +13,106 @@ body {
 
 .showing {
     display: block;
+}
+
+.center {
+    margin: auto;
+    padding: 10% 0;
+}
+
+.write {
+    height: 45px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    border: none;
+    border-bottom: 1px solid #fcfcfc;
+    outline: none;
+    background: transparent;
+    line-height: 1.5;
+    color: #fcfcfc;
+}
+.write::-webkit-input-placeholder {
+    color: #fcfcfc;
+}
+
+body .container {
+    box-sizing: border-box;
+    max-width: 100%;
+    height: 100%;
+    display: grid;
+    position: relative;
+}
+
+body .container .clock {
+    font-size: 160px;
+    margin-bottom: 20px;
+}   
+
+body .container .form {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+body .container .form input {
+    border: none;
+}
+
+body .container .greetings {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 60px;
+}
+
+body .container .toDoForm {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+body .container .toDoList-before {
+    position: relative;
+}
+
+body .container .toDoList {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body .container .toDoList li button {
+    margin-right: 5px;
+    background: transparent;
+    border: none;
+    padding: 5px;
+    font-size: 20px;
+}
+
+body .container .toDoList li button:hover {
+    cursor: pointer;
+}
+
+body .container .weather {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opactiy: 1;
+    }
+}
+
+.bgImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeIn 0.5s linear;
 }
